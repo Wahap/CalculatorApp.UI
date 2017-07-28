@@ -1,11 +1,29 @@
-<div class="col-md-6 col-md-offset-3">
-      <form class="form-signin"  #loginForm="ngForm">
-        <h2 class="form-signin-heading"></h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" class="form-control margin5bottom" required [(ngModel)]="model.email" placeholder="Email address" name="username" #username="ngModel" style="margin-bottom: 5px;">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" class="form-control margin5bottom" placeholder="Password" [(ngModel)]="model.password" name="password" style="margin-bottom: 5px;">      
-        <button type="submit" class="btn btn-lg btn-primary btn-block btn-signin margin5bottom"  [disabled]="!loginForm.form.valid">Submit</button>
-        <button type="button" class="btn btn-lg btn-primary btn-block btn-signin margin5bottom" (click)="clickButton()">Submit 2</button>
-      </form>
-      </div>   
+<!-- <div class="col-md-3 col-md-offset-4" >
+  <form class="form-signin" #loginForm="ngForm">
+    <h2 class="form-signin-heading"></h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" class="form-control margin5bottom" required [(ngModel)]="model.email" placeholder="Email address" name="username"
+      #username="ngModel" style="margin-bottom: 5px;">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" class="form-control margin5bottom" placeholder="Password" [(ngModel)]="model.password" name="password"
+      style="margin-bottom: 5px;">
+    <button type="submit" class="btn btn-lg btn-primary btn-block btn-signin margin5bottom" [disabled]="!loginForm.form.valid">Submit</button>
+    <button type="button" class="btn btn-lg btn-primary btn-block btn-signin margin5bottom" (click)="clickButton()">Submit 2</button>
+  </form>
+</div>
+ -->
+<div class="col-md-3 col-md-offset-4" style="margin-top: 20px">
+  <div class="input-group margin-bottom-sm">
+    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+    <input class="form-control" type="text" placeholder="Email address" [(ngModel)]="model.email" >
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+    <input class="form-control" type="password" placeholder="Password" [(ngModel)]="model.password">
+  </div>
+    <div class="input-group">
+  
+  <button type="button" class="btn btn-lg btn-primary btn-block btn-signin margin5bottom" (click)="login()">Login</button>
+  </div>
+ 
+</div>

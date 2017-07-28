@@ -10,8 +10,8 @@ export class LoginComponent implements OnInit {
   model: any;
   
   constructor() {
-
-    this.model = { email: 'EMAIL212223', password: '123' }
+this.model={};
+   // this.model = { email , password: }
   }
 
   ngOnInit() {
@@ -22,11 +22,10 @@ export class LoginComponent implements OnInit {
 
   }
 
-  clickButton() {
-    this.model.email = "wapper";
-     
-    //console.log(this.model.email);
-   // alert("yeah");
+  login() {
+  
+    alert("email "+this.model.email +" and Pass"+this.model.password);
+
   }
 
 }

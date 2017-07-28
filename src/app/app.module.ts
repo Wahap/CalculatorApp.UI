@@ -4,12 +4,14 @@ import { AppRoutingModule, routedComponents} from './app.routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    routedComponents
+    routedComponents,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
