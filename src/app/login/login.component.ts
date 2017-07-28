@@ -1,22 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm }    from '@angular/forms';
-import {ConfigService, IConfig} from '../app.config';
- import {   Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ConfigService, IConfig } from '../app.config';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  model: any;
+  constructor() {
 
-  constructor() { }
+    this.model = { email: 'EMAIL212223', password: '123' }
+  }
 
   ngOnInit() {
   }
 
-  onSubmit()
-  {
-    console.log("o yeah man");
+  onSubmit() {
+
+
+  }
+
+  clickButton() {
+    this.model.email = "wapper";
+    console.log(this.model.email);
   }
 
 }
