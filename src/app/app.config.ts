@@ -19,7 +19,7 @@ export class ConfigService  {
 	
 	
   let logInUrl = (debug ? serverLoginPathDebug + "authentication/login" : serverLoginPath + "authentication/login");
-  //let getLogOutURl = (debug ? serverLoginPathDebug + "authentication/logout" : serverLoginPath + "authentication/logout");
+  let getLogOutURl = (debug ? serverLoginPathDebug + "authentication/logout" : serverLoginPath + "authentication/logout");
 //   let getUserNotification = (debug ? serverUserNotificationPathDebug + "UserNotification/load" : serverUserNotificationPath + "UserNotification/load");
 //   let loadNotification = (debug ? serverUserNotificationPathDebug + "VehicleTypeActivity/load" : serverUserNotificationPath + "VehicleTypeActivity/load");
 //   let getCountry = (debug ? serverUserNotificationPathDebug + "Countries/load" : serverUserNotificationPath + "Countries/load");
