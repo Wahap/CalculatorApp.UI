@@ -12,6 +12,7 @@ export class LoginServiceService {
   }
 
   login(url: string, userState: any): any {
+
     return this.http.post(url, userState)
       .map(this.extractDetailData);
   }
@@ -24,6 +25,7 @@ export class LoginServiceService {
 
   private extractDetailData(res: Response) {
     let body = res.json();
+    console.log("asd"+body)
     return body || [];
   }
 }

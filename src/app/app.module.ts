@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Http, XHRBackend, HttpModule, RequestOptions, JsonpModule } from '@angular/http';
+import { MaterialModule, } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {ConfigService} from './app.config';
 import { AppRoutingModule, routedComponents} from './app.routes';
 import { AppComponent } from './app.component';
@@ -19,6 +22,8 @@ import { LoginServiceService } from "app/services/login-service.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule
   ],
