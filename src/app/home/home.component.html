@@ -1,44 +1,112 @@
-<md-tab-group>
-  <md-tab label="Sub">
-    <div>
-      <form class="example-form">
+<div class="col-md-3 col-md-offset-4" style="margin-top: 20px">
+  <div class="input-group margin-bottom-sm col-lg-3 col-centered">
+    <md-tab-group>
+      <md-tab label="Sum">
+        <div>
+          <form class="example-form">
+            <table class="example-full-width " cellspacing="0">
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First Number" type="text" [(ngModel)]="number1" name="number1">
+                  </md-input-container>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Second Number" type="text" [(ngModel)]="number2" name="number2">
+                  </md-input-container>
+                </td>
+              </tr>
+            </table>
+          </form>
 
+        </div>
+        <div style="width:120px;float:left ">
+          <button md-raised-button color="primary" (click)="calculateSum(number1,number2)">Calculate </button>
+        </div>
+      </md-tab>
+      <!-- End Sub -->
+      <md-tab label="Sub">
+        <div>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First Number">
+                  </md-input-container>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Second Number">
+                  </md-input-container>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div style="width:120px;float:left ">
+          <button md-raised-button color="primary" (click)="calculateSub()">Calculate </button>
+        </div>
+      </md-tab>
+      <!-- End Sub -->
+      <md-tab label="Multply">
+        <div>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First Number">
+                  </md-input-container>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Second Number">
+                  </md-input-container>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div style="width:120px;float:left ">
+          <button md-raised-button color="primary" (click)="calculateMulply()">Calculate </button>
+        </div>
+      </md-tab>
+      <!-- End Multply -->
+      <md-tab label="Divide">
+        <div>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First Number">
+                  </md-input-container>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Second Number">
+                  </md-input-container>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div style="width:120px;float:left ">
+          <button md-raised-button color="primary" (click)="calculateDivide()">Calculate </button>
+        </div>
+      </md-tab>
+      <!-- End Divide -->
+    </md-tab-group>
 
-        <table class="example-full-width" cellspacing="0">
-          <tr>
-            <td>
-              <md-input-container class="example-full-width">
-                <input mdInput placeholder="First name">
-              </md-input-container>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <md-input-container class="example-full-width">
-                <input mdInput placeholder="Long Last Name That Will Be Truncated">
-              </md-input-container>
-            </td>
-          </tr>
-          <tr style="width:120px;float:right ">
-            <td><button md-raised-button color="primary">Calculate </button></td>
-          </tr>
-        </table>
-
-
-
-
-      </form>
-
-    </div>
-  </md-tab>
-  <!-- End Sub -->
-  <md-tab label="Sum">Content 2</md-tab>
-</md-tab-group>
- 
-
-
-<div>
-  <button md-raised-button color="primary">My Button</button>
+  </div>
 </div>
-
-
