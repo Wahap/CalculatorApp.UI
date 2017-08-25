@@ -9,10 +9,10 @@ export class LoginServiceService {
 
   constructor(private http: Http) {
 
-  }
+  } 
 
   login(url: string, userState: any): any {
-
+ 
     return this.http.post(url, userState)
       .map(this.extractDetailData);
   }
