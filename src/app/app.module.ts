@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LoginServiceService } from "app/services/login-service.service";
+import { HomeService } from "app/services/home.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { LoginServiceService } from "app/services/login-service.service";
     FormsModule,
     HttpModule
   ],
-  providers: [LoginServiceService,ConfigService, { provide:ConfigService,  useClass: ConfigService  },],
+  providers: [LoginServiceService,ConfigService, { provide:ConfigService,  useClass: ConfigService  },HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

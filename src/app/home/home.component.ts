@@ -1,5 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LoginServiceService } from "app/services/login-service.service";
+import { HomeService } from "app/services/home.service";
+import { ConfigService, IConfig } from "app/app.config";
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -11,19 +15,31 @@ export class HomeComponent implements OnInit {
   numbers: any;
   number1: any;
   number2: any;
+  config: IConfig;
+  errorMessage: string;
 
-  constructor(private loginService: LoginServiceService) {
+  constructor(private loginService: LoginServiceService,private homeService:HomeService,private configService: ConfigService,private router: Router) {
 
-    this.message = "login is successful. username=" + loginService.getGreetingMessage();
-
-    this.numbers = { number1: "", number2: "" };
+    this.numbers = { num1: "", num2: "" };
   }
 
   ngOnInit() {
-
+    this.config = this.configService.getAppConfig();
   }
-  calculateSum() {
-    alert(this.number1 + this.number2);
+  calculateSum(number1,number2) {
+
+ this.numbers.num1=number1;
+ this.numbers.num2=number2;
+
+      this.homeService.calculate(this.config.calculate+"/sum", this.numbers)
+        .subscribe(result => {
+          if (result != null) {
+            this.message = result;
+            this.router.navigate(['/home']);
+          }
+        },
+        error => this.errorMessage = <any>error
+        );
   }
   calculateSub(number1, number2) {
     alert(number1 - number2);
