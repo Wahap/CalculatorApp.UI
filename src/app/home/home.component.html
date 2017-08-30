@@ -27,7 +27,7 @@
           <button md-raised-button color="primary" (click)="calculateSum(number1,number2)">Calculate </button>
         </div>
       </md-tab>
-      <!-- End Sub -->
+      <!-- End Sum -->
       <md-tab label="Sub">
         <div>
           <form class="example-form">
@@ -35,14 +35,14 @@
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="First Number">
+                    <input mdInput placeholder="First Number" type="text" [(ngModel)]="number1" name="number1">
                   </md-input-container>
                 </td>
               </tr>
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="Second Number">
+                    <input mdInput placeholder="Second Number" type="text" [(ngModel)]="number2" name="number2">
                   </md-input-container>
                 </td>
               </tr>
@@ -50,7 +50,7 @@
           </form>
         </div>
         <div style="width:120px;float:left ">
-          <button md-raised-button color="primary" (click)="calculateSub()">Calculate </button>
+          <button md-raised-button color="primary" (click)="calculateSub(number1,number2)">Calculate </button>
         </div>
       </md-tab>
       <!-- End Sub -->
@@ -61,14 +61,14 @@
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="First Number">
+                    <input mdInput placeholder="First Number" type="text" [(ngModel)]="number1" name="number1">
                   </md-input-container>
                 </td>
               </tr>
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="Second Number">
+                    <input mdInput placeholder="Second Number" type="text" [(ngModel)]="number2" name="number2">
                   </md-input-container>
                 </td>
               </tr>
@@ -76,7 +76,7 @@
           </form>
         </div>
         <div style="width:120px;float:left ">
-          <button md-raised-button color="primary" (click)="calculateMulply()">Calculate </button>
+          <button md-raised-button color="primary" (click)="calculateMultiply(number1,number2)">Calculate </button>
         </div>
       </md-tab>
       <!-- End Multply -->
@@ -87,14 +87,14 @@
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="First Number">
+                    <input mdInput placeholder="First Number" type="text" [(ngModel)]="number1" name="number1">
                   </md-input-container>
                 </td>
               </tr>
               <tr>
                 <td>
                   <md-input-container class="example-full-width">
-                    <input mdInput placeholder="Second Number">
+                    <input mdInput placeholder="Second Number" type="text" [(ngModel)]="number2" name="number2">
                   </md-input-container>
                 </td>
               </tr>
@@ -102,7 +102,7 @@
           </form>
         </div>
         <div style="width:120px;float:left ">
-          <button md-raised-button color="primary" (click)="calculateDivide()">Calculate </button>
+          <button md-raised-button color="primary" (click)="calculateDivide(number1,number2)">Calculate </button>
         </div>
       </md-tab>
       <!-- End Divide -->

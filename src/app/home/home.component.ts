@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   config: IConfig;
   errorMessage: string;
 
-  constructor(private loginService: LoginServiceService,private homeService:HomeService,private configService: ConfigService,private router: Router) {
+  constructor(private loginService: LoginServiceService, private homeService: HomeService, private configService: ConfigService, private router: Router) {
 
     this.numbers = { num1: "", num2: "" };
   }
@@ -26,29 +26,56 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.config = this.configService.getAppConfig();
   }
-  calculateSum(number1,number2) {
+  calculateSum(number1, number2) {
 
- this.numbers.num1=number1;
- this.numbers.num2=number2;
+    this.numbers.num1 = number1;
+    this.numbers.num2 = number2;
 
-      this.homeService.calculate(this.config.calculate+"/sum", this.numbers)
-        .subscribe(result => {
-          if (result != null) {
-            this.message = result;
-            this.router.navigate(['/home']);
-          }
-        },
-        error => this.errorMessage = <any>error
-        );
+    this.homeService.calculate(this.config.calculate + "/sum", this.numbers)
+      .subscribe(result => {
+        if (result != null) {
+          this.message = result;
+          //   this.router.navigate(['/home']);
+        }
+      },
+      error => this.errorMessage = <any>error
+      );
   }
   calculateSub(number1, number2) {
-    alert(number1 - number2);
+    this.numbers.num1 = number1;
+    this.numbers.num2 = number2;
+    this.homeService.calculate(this.config.calculate + "/sub", this.numbers)
+      .subscribe(result => {
+        if (result != null) {
+          this.message = result;
+        }
+      },
+      error => this.errorMessage = <any>error
+      );
   }
-  calculateMultply(number1, number2) {
-    alert(number1 * number2);
+  calculateMultiply(number1, number2) {
+    this.numbers.num1 = number1;
+    this.numbers.num2 = number2;
+    this.homeService.calculate(this.config.calculate + "/multiply", this.numbers)
+      .subscribe(result => {
+        if (result != null) {
+          this.message = result;
+        }
+      },
+      error => this.errorMessage = <any>error
+      );
   }
   calculateDivide(number1, number2) {
-    alert(number1 / number2);
+    this.numbers.num1 = number1;
+    this.numbers.num2 = number2;
+    this.homeService.calculate(this.config.calculate + "/divide", this.numbers)
+      .subscribe(result => {
+        if (result != null) {
+          this.message = result;
+        }
+      },
+      error => this.errorMessage = <any>error
+      );
   }
 
 
