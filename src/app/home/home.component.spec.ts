@@ -29,6 +29,7 @@ describe('HomeComponent', () => {
   });
 
   it('should be created', () => {
+    var data=component.calculateSub("2","4");
     expect(component).toBeTruthy();
   });
 });
